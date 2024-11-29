@@ -1,7 +1,7 @@
 container:
   image     : gofer064/fixit:v1
   port      : 8080
-replicaCount: 2
+replicaCount: 1
 
 node:
   port      : 30080
