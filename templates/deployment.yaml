@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-fixit-deployment
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-fixit
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-fixit
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-fixit
+        image: {{ .Values.container.image }}
+        ports:
+        - containerPort: {{ .Values.container.port }}
