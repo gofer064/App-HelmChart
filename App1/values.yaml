@@ -4,4 +4,4 @@ container:
 replicaCount: 4
 
 node:
-  port      : 30080
+  port      : 30081
